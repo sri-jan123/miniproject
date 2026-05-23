@@ -27,7 +27,7 @@ function Profile() {
       }
 
       try {
-        const response = await axios.get('http://localhost:8080/profile', {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ function Profile() {
         return;
       }
 
-      const response = await axios.post('http://localhost:8080/profilepic', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/profilepic`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

@@ -10,7 +10,7 @@ function Ideas() {
 
   useEffect(() => {
     
-    axios.get('http://localhost:8080/ideas', {
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/ideas`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`  
       }
@@ -33,7 +33,7 @@ function Ideas() {
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/ideas', { idea: ideaInput }, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/ideas`, { idea: ideaInput }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}` 
         }

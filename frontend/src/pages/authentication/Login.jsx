@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const loginResponse = await axios.post('http://localhost:8080/login', {
+            const loginResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, {
                 email,
                 password
             }, {

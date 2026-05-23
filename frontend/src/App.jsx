@@ -64,7 +64,6 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
 
       {/* improvement section routes */}
-
       <Route path='/kitchenimprovement' element={<Kitchen_improvement kitchentips={kitchentips}/>}/>
       <Route path='/drawingimprovement' element={<Drawing_improvement drawingtips={drawingtips}/>}/>
       <Route path='/bedroomimprovement' element={<Bedroom_improvement bedroomtips={bedroomtips}/>}/>
@@ -74,7 +73,6 @@ function App() {
 
 
       {/* D.I.Y section routes */}
-
       <Route path='/diygarden' element={<Garden_diy gardendiy={gardendiy}/>}/>
       <Route path='/diybathroom' element={<Bathroom_diy bathroomdiy={bathroomdiy}/>}/>
       <Route path='/diybedroom' element={<Bedroom_diy bedroomdiy={bedroomdiy}/>}/>
@@ -88,7 +86,6 @@ function App() {
       <Route path='/ideas' element={<Ideas/>}/>
       <Route path='/projectupload' element={<ProjectUpload/>}/>
       <Route path='/projects' element={<Projects/>}/>
-
 
     </Routes>
   );

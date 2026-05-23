@@ -30,7 +30,7 @@ function ProjectUpload() {
   
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:8080/projects', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/projects`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -43,7 +43,6 @@ function ProjectUpload() {
       setMessage('Error submitting project');
     }
   };
-
 
   return (
     <div>
@@ -69,7 +68,6 @@ function ProjectUpload() {
       {message && <p>{message}</p>}
       </div>
      
-      
   );
 }
 
